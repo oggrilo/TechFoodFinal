@@ -2,6 +2,7 @@ import mysql.connector
 import conexao
 import menuADM
 import crudFuncionario
+import menuCliente
 import menuLogin
 
 db_connection = conexao.conectar() #Abrindo a conexão com o banco de dados
@@ -141,7 +142,7 @@ def loginCliente(cpfCliente,senhaCliente):
 
             for (codigoCliente, nomeCliente, cpfCliente, celularCliente, senhaCliente) in con:
                 print(cpfCliente, senhaCliente)
-            print('Logado como CLIENTE!!!\n')
+            return menuCliente.operacao('Logado como CLIENTE!!!\n')
     except Exception as erro:
         print(erro)
 def loginFunc(cpfFunc,senhaFunc):
@@ -151,7 +152,7 @@ def loginFunc(cpfFunc,senhaFunc):
 
         for (codigoFunc, nomeFunc, cpfFunc, celularFunc, salarioFunc, senhaFunc) in con:
             print(cpfFunc, senhaFunc)
-        print('Logado como CLIENTE!!!\n')
+        print('Logado como ADM!!!\n')
         return menuADM.operacao()
     except Exception as erro:
         print(erro)
