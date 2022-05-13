@@ -1,5 +1,6 @@
 import this
 import hamburgao
+import menuLogin
 import pizza
 import bauru
 
@@ -28,7 +29,7 @@ def operacao():
             # operacao para 3.
             bauru.operacao()
         elif this.opcao == 4:
-            login.operacao()
+            menuLogin.escolhas()
         elif this.opcao == 5:
             print('Fechando... agradecemos sua presença aqui!')
         else:
