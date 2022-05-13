@@ -142,7 +142,7 @@ def loginCliente(cpfCliente,senhaCliente):
 
             for (codigoCliente, nomeCliente, cpfCliente, celularCliente, senhaCliente) in con:
                 print(cpfCliente, senhaCliente)
-            return menuCliente.operacao('Logado como CLIENTE!!!\n')
+            return menuCliente.operacao()('Logado como CLIENTE!!!\n')
     except Exception as erro:
         print(erro)
 def loginFunc(cpfFunc,senhaFunc):
