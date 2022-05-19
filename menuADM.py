@@ -14,7 +14,7 @@ def menu():
             '5. Atualizar Descrição do Lanche\n'               +
             '6. Atualizar Valor do Lanche\n'               +
             '7. Atualizar Quantidade do Lanche\n'               +
-            '8. Exlcuir Lanche'
+            '8. Exlcuir Lanche\n' +
             '9. Voltar\n'                          +
             '0. Sair')
     this.opcao = int(input())

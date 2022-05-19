@@ -37,7 +37,7 @@ def operacao():
         elif this.opcao == 3:
             # Coletando a digitação do usuário
             print('Informe o código: ')
-            codigo = input()
+            codigoFunc = input()
             print('Informe o novo Nome: ')
             nomeFunc = input()
             # Uso do método
