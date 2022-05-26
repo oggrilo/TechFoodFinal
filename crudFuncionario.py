@@ -28,6 +28,7 @@ def operacao():
                 print('CPF válido.')
             else:
                 operacao()
+
             print('Digite o Celular: ')
             celularFunc = input()
             print('Digite o valor do Salário: ')
