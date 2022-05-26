@@ -24,6 +24,10 @@ def operacao():
             nomeFunc = input()
             print('Digite o CPF: ')
             cpfFunc = input()
+            if operacoes.cpf_validate(cpfFunc):
+                print('CPF válido.')
+            else:
+                operacao()
             print('Digite o Celular: ')
             celularFunc = input()
             print('Digite o valor do Salário: ')
@@ -31,7 +35,9 @@ def operacao():
             print('Digite a  Senha: ')
             senhaFunc = input()
             # utilizar o método cadastrar
-            operacoes.inserirFunc(nomeFunc, cpfFunc, celularFunc, salarioFunc, senhaFunc)
+            if nomeFunc + cpfFunc + celularFunc + salarioFunc + senhaFunc == "":
+                print("Favor não deixe nenhum espaço em branco, Tente novamente!")
+            else:operacoes.inserirFunc(nomeFunc, cpfFunc, celularFunc, salarioFunc, senhaFunc)
         elif this.opcao == 2:
             operacoes.selecionarFunc()
         elif this.opcao == 3:
@@ -41,7 +47,9 @@ def operacao():
             print('Informe o novo Nome: ')
             nomeFunc = input()
             # Uso do método
-            operacoes.atualizarNomeFunc(codigoFunc, nomeFunc)
+            if codigoFunc + nomeFunc == "":
+                print("Favor não deixe nenhum espaço em branco, Tente novamente!")
+            else:operacoes.atualizarNomeFunc(codigoFunc, nomeFunc)
         elif this.opcao == 4:
             # Coletando a digitação do usuário
             print('Informe o código: ')
@@ -49,7 +57,9 @@ def operacao():
             print('Informe o novo Celular: ')
             celularFunc = input()
             # Uso do método
-            operacoes.atualizarCelularFunc(codigoFunc, celularFunc)
+            if codigoFunc + celularFunc == "":
+                print("Favor não deixe nenhum espaço em branco, Tente novamente!")
+            else:operacoes.atualizarCelularFunc(codigoFunc, celularFunc)
         elif this.opcao == 5:
             # Coletando a digitação do usuário
             print('Informe o código: ')
@@ -57,7 +67,9 @@ def operacao():
             print('Informe o novo Salário: ')
             salarioFunc = input()
             # Uso do método
-            operacoes.atualizarSalario(codigoFunc, salarioFunc)
+            if codigoFunc + salarioFunc == "":
+                print("Favor não deixe nenhum espaço em branco, Tente novamente!")
+            else:operacoes.atualizarSalario(codigoFunc, salarioFunc)
         elif this.opcao == 6:
             # Coletando a digitação do usuário
             print('Informe o código: ')
@@ -65,11 +77,15 @@ def operacao():
             print('Informe o novo Senha: ')
             senhaFunc = input()
             # Uso do método
-            operacoes.atualizarSenhaFunc(codigoFunc, senhaFunc)
+            if codigoFunc + senhaFunc == "":
+                print("Favor não deixe nenhum espaço em branco, Tente novamente!")
+            else:operacoes.atualizarSenhaFunc(codigoFunc, senhaFunc)
         elif this.opcao == 7:
             print('Informe o código: ')
             codigoFunc = input()
-            operacoes.excluirFunc(codigoFunc)
+            if codigoFunc == "":
+                print("Favor não deixe nenhum espaço em branco, Tente novamente!")
+            else:operacoes.excluirFunc(codigoFunc)
         elif this.opcao == 8:
             menuADM.operacao()
         elif this.opcao == 0:

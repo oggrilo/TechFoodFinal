@@ -36,7 +36,9 @@ def operacao():
             print('Digite a Quantidade: ')
             quantidadeLanche = input()
             # utilizar o método cadastrar
-            operacoes.inserir(nomeLanche, descricaoLanche, valorLanche, quantidadeLanche)
+            if nomeLanche + descricaoLanche + valorLanche + quantidadeLanche == "":
+                print("Favor não deixe nenhum espaço em branco, Tente novamente!")
+            else:operacoes.inserir(nomeLanche, descricaoLanche, valorLanche, quantidadeLanche)
         elif this.opcao == 3:
             operacoes.selecionar()
         elif this.opcao == 4:
@@ -46,7 +48,9 @@ def operacao():
             print('Informe o novo nome: ')
             nomeLanche = input()
             # Uso do método
-            operacoes.atualizarNome(codigo, nomeLanche)
+            if codigo + nomeLanche == "":
+                print("Favor não deixe nenhum espaço em branco, Tente novamente!")
+            else:operacoes.atualizarNome(codigo, nomeLanche)
         elif this.opcao == 5:
             # Coletando a digitação do usuário
             print('Informe o código: ')
@@ -54,7 +58,9 @@ def operacao():
             print('Informe a nova descrição: ')
             descricaoLanche = input()
             # Uso do método
-            operacoes.atualizarDescricao(codigo, descricaoLanche)
+            if codigo + descricaoLanche == "":
+                print("Favor não deixe nenhum espaço em branco, Tente novamente!")
+            else:operacoes.atualizarDescricao(codigo, descricaoLanche)
         elif this.opcao == 6:
             # Coletando a digitação do usuário
             print('Informe o código: ')
@@ -62,7 +68,9 @@ def operacao():
             print('Informe o novo valor: ')
             valorLanche = input()
             # Uso do método
-            operacoes.atualizarValor(codigo, valorLanche)
+            if codigo + valorLanche == "":
+                print("Favor não deixe nenhum espaço em branco, Tente novamente!")
+            else:operacoes.atualizarValor(codigo, valorLanche)
         elif this.opcao == 7:
             # Coletando a digitação do usuário
             print('Informe o código: ')
@@ -70,11 +78,15 @@ def operacao():
             print('Informe a nova quantidade: ')
             quantidadeLanche = input()
             # Uso do método
-            operacoes.atualizarQauntidade(codigo, quantidadeLanche)
+            if codigo + quantidadeLanche == "":
+                print("Favor não deixe nenhum espaço em branco, Tente novamente!")
+            else:operacoes.atualizarQuantidade(codigo, quantidadeLanche)
         elif this.opcao == 8:
             print('Informe o código: ')
             codigo = input()
-            operacoes.excluir(codigo)
+            if codigo == "":
+                print("Favor não deixe nenhum espaço em branco, Tente novamente!")
+            else:operacoes.excluir(codigo)
         elif this.opcao == 9:
             menuLogin.escolhas()
         elif this.opcao == 0:
